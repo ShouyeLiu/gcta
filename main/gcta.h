@@ -58,7 +58,7 @@ typedef MatrixXd eigenMatrix;
 typedef VectorXd eigenVector;
 typedef DynamicSparseMatrix<double> eigenDynSparseMat;
 #endif
-
+//test
 class gcta {
 public:
     gcta(int autosome_num, double rm_ld_cutoff, string out);
