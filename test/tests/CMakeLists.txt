@@ -29,6 +29,13 @@ function(addTestItem test_name source lib_name run_param)
     add_test(NAME ${test_name} COMMAND ${test_name} "${run_param}")
 endfunction()
 
-# Add your test items
-addTestItem(chisq_test test_chisq.cpp "statlib" "")
-addTestItem(covar_test test_covar.cpp "covar" "")
+# Add your test items with correct target linkage to gcta_core
+addTestItem(chisq_test test_chisq.cpp "gcta_core" "")
+addTestItem(covar_test test_covar.cpp "gcta_core" "")
+addTestItem(logger_test test_logger.cpp "gcta_core" "")
+addTestItem(thread_test test_thread.cpp "gcta_core" "")
+# addTestItem(pheno_test test_pheno.cpp "gcta_core" "")
+# addTestItem(marker_test test_marker.cpp "gcta_core" "")
+# addTestItem(geno_test test_geno.cpp "gcta_core" "")
+# addTestItem(grm_test test_grm.cpp "gcta_core" "")
+# addTestItem(matrix_test test_matrix.cpp "gcta_core" "")

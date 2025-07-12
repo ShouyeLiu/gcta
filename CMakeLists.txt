@@ -166,6 +166,10 @@ foreach(_lib ${SRCS})
     list(APPEND libs_list ${lib_name})
 endforeach(_lib)
 
+### Add consolidated library for tests
+add_library(gcta_core STATIC ${SRCS})
+target_include_directories(gcta_core PUBLIC ${COMMON_INCLUDES})
+
 add_subdirectory(main)
 add_subdirectory(submods)
 
